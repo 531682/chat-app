@@ -1,21 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat App</title>
-    <script> 
-    const roomName = "<%= roomName %>" 
-    </script>
-    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat App</title>
+  <script>
+    const roomName = "<%= roomName %>"
+  </script>
+  <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script defer src="script.js"></script>
+  <style>
 
+    * {
+      box-sizing: border-box;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    header {
+      background-color: #1F1F1F;
+      width: 100%;
+      height: 140px;
+      position: fixed;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    aside {
+      float: left;
+      background-color: #3E3E3E;
+      width: 30%;
+      height: 100vh;
+    }
+
+    main {
+      float: left;
+      background-color: #E3E3E3;
+      width: 70%;
+      height: 100vh;
+      padding-top: 140px;
+      padding-bottom: 100px;
+    }
+
+    footer {
+      background-color: #1F1F1F;
+      width: 100%;
+      height: 100px;
+      position: fixed;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      bottom: 0;
+      padding-left: 30%;
+    }
+
+    #send-container {
+      background-color: #3C3C3C;
+      border-radius: 100px;
+      height: 50px;
+      width: 60%;
+      margin-top: 24px;
+    }
+
+    #send-container button {
+      position: absolute;
+      background-color: #007EF4;
+      width: 35px;
+      height: 35px;
+      color: #E3E3E3;
+      border-radius: 100px;
+      border: 0;
+      margin-left: -3%;
+      margin-top: 0.5%;
+      outline: 0;
+    }
+
+    #send-container input[type="text"]{
+      height: 50px;
+      width: 100%;
+      background-color: transparent;
+      border: 0;
+      outline: 0;
+      padding-left: 5%;
+      font-size: 17px;
+      color: #fff;
+    }
+
+  </style>
 </head>
 <body>
+  <header>
+
+  </header>
+  <aside>
+
+  </aside>
+  <main>
     <div id="message-container"></div>
-    <form id="send-container">
-        <input type="text" id="message-input" autocomplete="off">
-        <button type="submit" id="send-button">Send</button>
-    </form>
+  </main>
+  <footer>
+        <form id="send-container">
+          <input type="text" id="message-input" placeholder="Type your message" autocomplete="off">
+          <button type="submit" id="send-button">Send</button>
+        </form>
+  </footer>
 </body>
 </html>
