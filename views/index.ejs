@@ -7,17 +7,146 @@
   <title>Chat App</title>
   <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
   <script defer src="script.js"></script>
+  <style>
+
+    * {
+      box-sizing: border-box;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    body {
+      background-color: #E3E3E3;
+    }
+
+    header {
+      background-color: #1F1F1F;
+      width: 100%;
+      height: 140px;
+      position: fixed;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      z-index: 1;
+    }
+    aside {
+      position: fixed;
+      left: 0;
+      background-color: #3E3E3E;
+      width: 30%;
+      height: 100vh;
+      padding-top: 140px;
+    }
+
+    main {
+      float: right;
+      width: 70%;
+      height: auto;
+      padding-top: 140px;
+      padding-bottom: 100px;
+    }
+
+    main form {
+      width: 300px;
+      height: 50px;
+      margin: auto;
+      margin-top: 25vh;
+      background-color: #3C3C3C;
+      border-radius: 50px;
+      outline: 0;
+    }
+
+    footer {
+      background-color: #1F1F1F;
+      width: 100%;
+      height: 100px;
+      position: fixed;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      bottom: 0;
+      padding-left: 30%;
+    }
+
+    #send-container {
+      background-color: #3C3C3C;
+      border-radius: 100px;
+      height: 50px;
+      width: 60%;
+      margin-top: 24px;
+    }
+
+    main button {
+      float: right;
+      background-color: #007EF4;
+      width: 35px;
+      height: 35px;
+      color: #E3E3E3;
+      border-radius: 100px;
+      border: 0;
+      outline: 0;
+      margin-left: -100px;
+    }
+
+    main input[type="text"]{
+      height: 50px;
+      width: 100%;
+      background-color: transparent;
+      border: 0;
+      outline: 0;
+      padding-left: 5%;
+      font-size: 17px;
+      color: #fff;
+    }
+
+    .room {
+      width: 378.58px;
+      height: 81.75px;
+      margin: 0 auto;
+    }
+
+    .room div {
+      float: left;
+    }
+
+    .room a {
+      float: right;
+      color: #aaaaaa;
+    }
+
+    #room-container .room {
+      border-radius: 20px;
+      border-bottom-right-radius: 0px;
+      padding: 20px;
+      color: #fff;
+      font-family: sans-serif, Helvetica, Arial;
+    }
+
+    #room-container .room:nth-child(even) {
+      background-color: #4C4C4C;
+
+    }
+
+  </style>
 </head>
 <body>
-  <div id="room-container">
-    <% Object.keys(rooms).forEach(room => { %>
-      <div><%= room %></div>
-      <a href="/<%= room %>">Join</a>
-    <% }) %>
-  </div>
-  <form action="/room" method="POST">
-    <input name="room" type="text" required>
-    <button type="submit">New Room</button>
-  </form>
+  <header></header>
+  <aside>
+    <div id="room-container">
+      <% Object.keys(rooms).forEach(room => { %>
+        <div class="room">
+          <div><%= room %></div>
+          <a href="/<%= room %>">Join</a>
+        </div>
+      <% }) %>
+    </div>
+  </aside>
+  <main>
+    <div class="room-form">
+      <form action="/room" method="POST">
+        <input name="room" type="text" placeholder="Create Room" autocomplete="off" required>
+        <button type="submit">New Room</button>
+      </form>
+    </div>
+  </main>
+  <footer></footer>
 </body>
 </html>

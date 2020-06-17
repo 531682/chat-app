@@ -4,7 +4,7 @@ const roomContainer = document.getElementById('room-container')
 const messageForm = document.getElementById('send-container')
 const messageInput = document.getElementById('message-input')
 
-if (messageForm != null) {
+if (messageForm != '') {
   const name = prompt('What is your name?')
   appendMessage('You joined')
   socket.emit('new-user', roomName, name)
@@ -15,6 +15,7 @@ if (messageForm != null) {
     appendMessage(`You: ${message}`)
     socket.emit('send-chat-message', roomName, message)
     messageInput.value = ''
+    toBottom()
   })
 }
 
@@ -44,4 +45,9 @@ function appendMessage(message) {
   const messageElement = document.createElement('div')
   messageElement.innerText = message
   messageContainer.append(messageElement)
+}
+
+function toBottom() {
+  var div = document.getElementById('message-container')
+  div.scrollTop = div.scrollHeight - div.clientHeight
 }
