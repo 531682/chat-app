@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+body {
+    background-color: #E3E3E3;
+}
+
+aside {
+    float: left;
+    width: 29.11458333333333%;
+    max-width: 29.11458333333333%;
+    height: 100vh;
+
+    background-color: #3E3E3E;
+}
+
+aside .rooms {
+    float: left;
+    width: 375px;
+    height: 500px;
+
+    margin-top: 215px;
+    margin-left: 90px;
+}
+
+aside .rooms .room {
+    padding-top: 15px;
+    padding-left: 30px;
+    float: left;
+    width: 100%;
+    height: 80px;
+    border-radius: 15px;
+}
+
+aside .rooms .active {
+    background-color: #1A78D1;
+}
+aside .rooms .room:hover {
+    background-color: #515151;
+    cursor: pointer;
+}
+
+aside .rooms .active:hover {
+    background-color: #439aec;
+    cursor: pointer;
+}
+aside .rooms .room .title {
+    color: #fff;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 22px;
+}
+
+aside .rooms .room .description {
+    color: #5F5F5F;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 22px;
+}
+
+aside .rooms .active .description {
+    color: #B0CEEB;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 22px;
+}
+
+.chat {
+    float: left;
+    width: 70.88541666666666%;
+    max-width: 70.88541666666666%;
+    height: 100vh;
+    padding-top: 141px;
+    padding-bottom: 107px;
+    overflow-y: scroll;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 141px;
+
+    background-color: #1F1F1F;
+    border-bottom-left-radius:  30px; 
+    border-bottom-right-radius: 30px;
+}
+
+header .title {
+    float: left;
+    margin-top: 56px;
+    margin-left: 115px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    color: #fff;
+    line-height: 19px;
+}
+
+header .subtitle {
+    float: left;
+    margin-top: 64px;
+    margin-left: 15px;
+    color: #838383;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header .buttons {
+    float: right;
+    margin-top: 52px;
+    margin-right: 68px;
+
+    width: 470px;
+    height: 48px;
+}
+
+header .buttons button {
+    border-radius: 24px;
+    background-color: #1A78D1;
+    border: none;
+    width: 139px;
+    height: 48px;
+    color: #fff;
+    padding-top: 5px;
+    text-transform: uppercase;
+    margin-right: 15px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    height: 107px;
+    bottom:0;
+    border-top-left-radius:  30px; 
+    border-top-right-radius: 30px;
+
+    background-color: #1F1F1F;
+}
+
+.form-container {
+    float: right;
+    height: 48px;
+    border-radius: 48px;
+    background-color: #3C3C3C;
+}
+
+.form-container .message-form {
+    float: left;
+    margin-top: 17px;
+    margin-left: 33px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #fff;
+    width: 60%;
+}
+.form-long {
+    width: 43.66875%;
+    margin-top: 24px;
+    margin-right: 279.6px;
+}
+
+.form-short {
+    width: 370px;
+}
+
+.form-container button {
+    float: right;
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+
+    margin-top: 7px;
+    margin-right: 10px;
+
+    background-color: #1A78D1;
+    border: none;
+}
+
+.form-container button .send-img {
+    float: left;
+    margin-left: 6px;
+    width: 20px;
+    height: 20px;
+}
+
+.username {
+    float: left;
+    margin-top: 416px;
+    margin-left: 452px;
+}
+
+.username-description {
+    float: right;
+    width: 590px;
+    margin-top: 340px;
+    margin-right: 245px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 33px;
+    color: #606060;
+}
+
+.error {
+    border: 1px solid #DD1E1E;
+}
+
+.errorText {
+    color: #FF6464;
+    margin-top: 13px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.message-row {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: 155px;
+    padding-left: 28.9px;
+    padding-right: 29.9px;
+}
+
+.message {
+    width: 800px;
+    min-height: 115px;
+    border-radius: 18px;
+    padding-top: 28.9px;
+    padding-left: 28.9px;
+    padding-right: 29.9px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+.message-sender {
+    font-weight: bold;
+    display: inline-block;
+    font-size: 21px;
+}
+
+.message-time {
+    display: inline-block;
+    font-size: 16px;
+    color: #f1f1f1;
+}
+
+.message-content {
+    font-size: 19px;
+    color: #fff;
+    font-weight: normal;
+}
+
+.message-sent {
+    border-bottom-right-radius: 0px;
+    background: linear-gradient(to right, rgba(0,126,244,1) 0%, rgba(0,126,244,1) 50%, rgba(42,117,188,1) 100%);
+    float: right;
+}
+
+.message-received {
+    border-bottom-left-radius: 0px;
+    background: linear-gradient(to right, rgba(65,65,65,1) 0%, rgba(65,65,65,1) 50%, rgba(43,43,43,1) 100%);
+    float: left;
+}
